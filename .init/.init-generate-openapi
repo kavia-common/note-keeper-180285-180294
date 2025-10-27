@@ -1,0 +1,4 @@
+{
+    "command": "./gradlew bootRun",
+    "working_directory": "/home/kavia/workspace/code-generation/note-keeper-180285-180294/notes_backend"
+}
