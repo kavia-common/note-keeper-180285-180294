@@ -18,6 +18,7 @@ Key URLs:
 - API base: http://localhost:3001/api/notes
 - OpenAPI JSON: http://localhost:3001/openapi.json
 - Swagger UI: http://localhost:3001/swagger-ui.html
+- Convenience redirect to Swagger UI (preserves scheme/host/port): http://localhost:3001/docs
 - H2 Console: http://localhost:3001/h2-console (JDBC URL: jdbc:h2:mem:notesdb, user: sa, no password)
 
 Endpoints:
@@ -38,3 +39,7 @@ CORS:
 
 Notes:
 - Data is in-memory (reset on restart). Adjust JPA/H2 config as needed for persistence.
+
+Troubleshooting:
+- If /openapi.json returns 404, ensure the application started successfully and that `springdoc-openapi-starter-webmvc-ui` is on the classpath (see build.gradle).
+- In proxied environments, access Swagger UI using /docs to preserve the original scheme/host when redirecting.
